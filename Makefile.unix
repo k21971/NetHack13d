@@ -20,7 +20,7 @@ PREFIX = /opt/nethack/chroot
 GAMEDIR = $(PREFIX)/nh13d
 #       SHELLDIR = $(PREFIX)/games
 MANDIR  = $(GAMEDIR)/man/man6
-CFLAGS = -g
+CFLAGS = -g3 -O0 -fcommon -Wno-implicit-int -Wno-implicit-function-declaration
 LFLAGS = -X
 
 HACKCSRC = alloc.c apply.c bones.c cmd.c decl.c do.c do_name.c do_wear.c\
@@ -147,7 +147,7 @@ install: $(VARAUX)
 	chown $(GAMEUID) $(SHELLDIR)/$(GAME) $(GAMEDIR) $(GAMEDIR)/*
 	chgrp $(GAMEGRP) $(SHELLDIR)/$(GAME) $(GAMEDIR) $(GAMEDIR)/*
 	chmod 0755 $(SHELLDIR)/$(GAME)
-	chmod 04755 $(GAMEDIR)/$(GAME)
+	chmod 0755 $(GAMEDIR)/$(GAME)
 	mkdir -p $(MANDIR)
 	-cp nethack.6 $(MANDIR)
 

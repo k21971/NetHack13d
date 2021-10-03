@@ -1,0 +1,11 @@
+\#*\#
+*.o
+*~
+data
+date.h
+makedefs
+nethack
+rumors
+main.c
+tty.c
+unix.c
