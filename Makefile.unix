@@ -137,8 +137,8 @@ initial:
 
 install: $(VARAUX)
 	-rm -f $(GAMEDIR)/$(GAME)
-	-rm -f $(GAMEDIR)/bones*
-	-rm -f $(GAMEDIR)/save/*
+#	-rm -f $(GAMEDIR)/bones*
+#	-rm -f $(GAMEDIR)/save/*
 	mkdir -p $(GAMEDIR)/save
 	cp help hh rumors data $(GAMEDIR)
 	sed "/^HACKDIR/c\HACKDIR=$(GAMEDIR)" <$(GAME).sh >$(SHELLDIR)/$(GAME)
